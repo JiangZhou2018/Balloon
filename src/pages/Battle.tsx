@@ -38,6 +38,7 @@ export default function BattlePage() {
   const { snapshot, buyUpgrade, setPriority, focusChest } = useBattleSimulation()
   const totalCoins = useMetaStore((state) => state.totalCoins)
   const [activeTab, setActiveTab] = useState<UpgradeTabKey>('Attack')
+  const displayedCoins = totalCoins + snapshot.coinsEarned
   const visibleUpgrades = useMemo(
     () => runtimeUpgradeDefinitions.filter((upgrade) => upgrade.category === activeTab),
     [activeTab],
@@ -61,7 +62,7 @@ export default function BattlePage() {
             </div>
             <div className="flex items-center gap-2 text-[12px] font-black leading-none">
               <span className="w-5 text-left text-amber-200">C</span>
-              <span className="text-[18px]">{formatCompactValue(totalCoins)}</span>
+              <span className="text-[18px]">{formatCompactValue(displayedCoins)}</span>
             </div>
             <div className="flex items-center gap-2 text-[12px] font-black leading-none">
               <span className="w-5 text-left text-fuchsia-200">💎</span>
