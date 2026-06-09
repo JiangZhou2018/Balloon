@@ -9,8 +9,8 @@ export default function HomePage() {
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-[440px] flex-col px-5 pb-10 pt-6">
       <section className="card-glass relative overflow-hidden rounded-[36px] px-6 pb-8 pt-6">
-        <div className="absolute right-[-20px] top-[-20px] h-36 w-36 rounded-full bg-amber-300/20 blur-3xl" />
-        <div className="absolute bottom-[-28px] left-[-12px] h-36 w-36 rounded-full bg-cyan-300/20 blur-3xl" />
+        <div className="pointer-events-none absolute right-[-20px] top-[-20px] h-36 w-36 rounded-full bg-amber-300/20 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-[-28px] left-[-12px] h-36 w-36 rounded-full bg-cyan-300/20 blur-3xl" />
 
         <div className="relative flex items-center justify-between">
           <div>
